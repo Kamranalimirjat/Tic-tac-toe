@@ -1,0 +1,110 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <style>
+        * { padding: 0; margin: 0; }
+        body { background-color: chocolate; }
+
+        .nav {
+            width: 100%; height: 80px;
+            background-color: skyblue;
+            display: flex; align-items: center;
+        }
+        .logo, .logo2 { width: 20%; display: flex; justify-content: center; }
+        .links { width: 60%; display: flex; justify-content: space-evenly; align-items: center; }
+        .links a { text-decoration: none; color: red; font-size: larger; }
+
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+            color: blue;
+            background-color: white;
+            border-radius: 20px;
+            padding: 10px;
+            display: inline-block;
+        }
+        #body {
+            margin-top: 20px;
+            border: 10px solid yellow;
+            border-radius: 30px;
+            background-color: lightgreen; 
+            padding: 20px;
+            margin-left: 30%;
+            margin-right: 30%;
+            text-align: center;
+        }
+        .buttons {
+            width: 80px; height: 70px;
+            background-color: darkgray;
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 10px;
+            margin: 5px;
+        }
+        .start {
+            padding: 15px 40px;
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            background: green;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        #footer {
+            padding: 15px;
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+            background-color: cornsilk;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="nav">
+        <div class="logo">
+            <img src="logo.jpeg" width="90" height="80" style="border-radius:50px;">
+        </div>
+        <div class="links">
+            <a href="Home.html">Home</a>
+            <a href="about.html">About us</a>
+            <a href="course.html">Courses</a>
+            <a href="contact.html">Contact us</a>
+        </div>
+        <div class="logo2">
+            <img src="navttcc.png" width="90" height="80" style="border-radius: 50%;">
+        </div>
+    </div>
+
+    <!-- Game Title -->
+    <center>
+        <h1>Tic Tac Toe Game</h1>
+
+        <!-- Start Button -->
+        <div id="body">
+            <form action="http://localhost/Game/Tic_Tac_game/tic_tac_game.php" method="GET">
+                <!-- Default empty values for the board -->
+                <input type="hidden" name="b" value="1">
+                <?php for($i=1; $i<=9; $i++): ?>
+                    <input type="hidden" name="bh<?php echo $i; ?>" value="">
+                <?php endfor; ?>
+                <button type="submit" class="start">Start Game</button>
+            </form>
+        </div>
+    </center>
+
+    <!-- Footer -->
+    <div id="footer">
+        <h2>Php Based Game</h2>
+        <h2>Developed by: Kamran Ali</h2>
+    </div>
+
+</body>
+</html>
