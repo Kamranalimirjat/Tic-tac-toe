@@ -16,9 +16,6 @@ A simple **Tic Tac Toe Game** built using **PHP** and HTML/CSS.
 3. Start **Apache** server.
 4. Open browser and go to:
 
-## 🖼️ Screenshot
-
-![Game Screenshot](game1.jpeg)
 
 ## 👨‍💻 Author
 - **Kamran Ali**
